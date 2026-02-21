@@ -17,6 +17,7 @@ END;
 
 CREATE TRIGGER TR_Employees_Delete
 ON Employees
+  
 AFTER DELETE
 
 AS
@@ -48,6 +49,7 @@ INNER JOIN deleted d
 ON i.EmployeeID  = d.EmployeeID;
 
 END;
+
 
 
 
