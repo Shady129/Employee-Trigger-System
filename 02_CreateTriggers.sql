@@ -3,7 +3,6 @@ ON Employees
 
 AFTER INSERT 
 
-
 AS
 BEGIN 
 
@@ -27,16 +26,9 @@ INSERT INTO EmployeeAuditLog(EmployeeID, ActionType, NewSalary,  ModifiedBy)
 SELECT EmployeeID, 'Delete', Salary, 'SYSTEM'
 FROM deleted
 
-END
+END;
 
 
-DELETE FROM Employees
-WHERE EmployeeID = 1;
-
-
-
-
-SELECT * FROM EmployeeAuditLog;
 
 
 
@@ -55,35 +47,10 @@ FROM inserted i
 INNER JOIN deleted d
 ON i.EmployeeID  = d.EmployeeID;
 
-END
-
-
-
-
-UPDATE Employees
-SET Salary = 15000
-WHERE EmployeeID = 3;
-
-SELECT * FROM EmployeeAuditLog;
+END;
 
 
 
 
 
 
-
--- INSERT
-INSERT INTO Employees (FirstName, LastName, Salary, Department)
-VALUES ('Final', 'Test', 9000, 'IT');
-
--- UPDATE
-UPDATE Employees
-SET Salary = 20000
-WHERE FirstName = 'Final';
-
--- DELETE
-DELETE FROM Employees
-WHERE FirstName = 'Final';
-
-
-SELECT * FROM EmployeeAuditLog;
