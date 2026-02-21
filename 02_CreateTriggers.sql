@@ -14,8 +14,6 @@ FROM inserted
 END;
 
 
-INSERT INTO Employees (FirstName, LastName, Salary, Department)
-VALUES ('Test2', 'User2', 6000, 'IT');
 
 
 CREATE TRIGGER TR_Employees_Delete
@@ -86,5 +84,6 @@ WHERE FirstName = 'Final';
 -- DELETE
 DELETE FROM Employees
 WHERE FirstName = 'Final';
+
 
 SELECT * FROM EmployeeAuditLog;
