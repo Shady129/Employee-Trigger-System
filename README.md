@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="Images/Employee-Trigger-System-Poster.png" width="100%">
+</p>
+
+
+
 # 👨‍💼 Employee Trigger System (SQL Server)
 
 A professional SQL Server project that demonstrates how to implement
